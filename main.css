@@ -256,6 +256,10 @@ header .searchbar {
 	margin-left: 1.2rem;
 }
 
+#searchfield:focus {
+ border: none;
+}
+
 #searchbar .sbutton {
 	padding: 5px;
 	display: inline-block;
