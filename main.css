@@ -371,7 +371,7 @@ span:after {
 }
 
 #img-caption {
-  flex: 1;
+  flex: 3;
   align-self: flex-end;
   text-align: left;
   text-transform: capitalize;
