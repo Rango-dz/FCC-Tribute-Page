@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <title>FCC Tribute Page</title>
 </head>
 <body>
     <div id="main">
          <header>
-            <div class="nav">
-                <ul class="inn-nav">
-                    <li>Home</li>
-                    <li>about</li>
-                    <li>contact</li>
-                    <li>something</li>
-                    <li>something</li>
-                    <li>something</li>
-                </ul>
+            <div class="info">
+                <div class="logo">
+                    <img src="/img/114 X 114.png" alt="">
+                 </div>
+                 <div class="searchbar">
+                    <form action="/index.html" id="mainsearch">   
+                    <div class="searchdiv1">
+                    <input id="searchfield" type="text" placeholder="  search">
+                    <span><input type="submit" value="" class="sbutton"></span>
+                    </div> 
+                    </form>
+                 </div>
+                 
+                 <div class="nav" id="Mynav">
+                    <ul class="inn-nav">
+                        <li><a href="/" title="Home page"> Home</a></li>
+                        <li><a href="/" title="Home page"> About</a></li>
+                        <li><a href="/" title="Home page"> contact</a></li>
+                        <li><a href="/" title="Home page"> Profile</a></li>
+                        <li class="icon" ><a href="javascript:void(0);" onclick="myMenu()">
+                            <i class="fa fa-bars"></i>
+                          </a></li>
+                    </ul>
+                </div>
+
+                
             </div>
+            
         </header>
 
 
@@ -28,14 +47,14 @@
         
             <section class="item item-title">
                 <h1 id="title"></h1>
-                <p></p>
+                <p>Tribute page</p>
             </section>
 
             <section class="item item-image">
                 <div id="img-div">
                     <figure>
     <img id="image" src="img/ec.jpg" alt="extrachik" width="500px">
-                    <figcaption id="img-caption"></figcaption>
+                    <figcaption id="img-caption">Random image</figcaption>
                 </figure>
                 </div>
             </section>
@@ -56,5 +75,15 @@
     </footer>
     </div>
     
+    <script>
+        function myMenu() {
+            var x = document.getElementById("Mynav");
+            if (x.className === 'nav') {
+                x.className += '  responsive';
+            } else {
+                x.className = 'nav';
+            }
+        }
+    </script>
 </body>
 </html>

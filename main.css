@@ -118,6 +118,7 @@
   --gobutton: #c6c6c6;
   --textcolor: #222222;
   --colorborder: #f8f8f8;
+  --blueweal: #118ed6;
 
 }
 #main {
@@ -137,7 +138,7 @@ color: #222222;
 }
 
 #main header {
-    padding-top: 5%;
+    /* padding-top: 10px; */
     margin: 0px;
     position: relative;
     top: 0;
@@ -158,9 +159,117 @@ color: #222222;
       color: #222;
 }
 
+header .info {
+  display: grid;
+  grid-template-columns: 50px 5fr auto;
+  /* grid-template-areas: 
+    "logo search search search menu1 menu1"  
+  ; */
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+header .info .logo{
+  width: 100%;
+  height: auto;
+}
+
+header .searchbar {
+  position: relative;
+  border: none;
+  width: 100%;
+}
+
+#mainsearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#mainsearch .searchdiv1 {
+  flex: 1 1;
+  position: relative;
+  width: max-content;
+  border: 1px solid #dfdfdf;
+  background-image: transparent;
+  box-shadow: 1px 1px 3px rgba(240, 242, 243, 0.2) inset;
+  background: #ffffff;
+}
+
+#mainsearch .searchdiv1:hover {
+  flex: 1 1;
+  position: relative;
+  width: max-content;
+  border: 1px solid #dfdfdf;
+  background-image: transparent;
+  box-shadow: 0px 0px 5px rgba(60, 61, 61, 0.7);
+  border-radius: 50px;
+}
+
+#searchfield {
+  width: 35vw;
+  height: 40px;
+  border: 0;
+  padding-left: 10px;
+  outline-color: #dfdfdf;
+  background: #ffffff;
+  line-height: 25px;
+  color: var(--black1f);
+  font-family: monospace, 'Courier New', Courier ;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+#searchfield:hover {
+  width: 35vw;
+  height: 40px;
+  border: 0;
+  padding-left: 10px;
+  outline-color: #dfdfdf;
+  background: #ffffff;
+  line-height: 25px;
+  color: var(--black1f);
+  font-family: monospace, 'Courier New', Courier ;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+#searchbar .sbutton {
+  padding: 5px;
+  display: inline-block;
+  box-sizing: content-box;
+  }
+
+  input[type="submit"] {
+    background-image: transparent;
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    padding-right: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+span {
+    position: relative;
+}
+
+span:after {
+    font-family: FontAwesome;
+    content: "\f002";
+    font-size: 1rem;
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    pointer-events: none;
+}
+
+
+
  .inn-nav {
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(50px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
     grid-auto-flow: column;
     list-style-type: none;
 } 
@@ -168,27 +277,41 @@ color: #222222;
  .nav li {
         /* background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
         background: #f8f8f8; */
-        padding: 7px;
+        padding: 16px;
         /* border-top: 1px solid #c6c6c6; */
         border-left: 1px solid #c6c6c6;
-        color: #222;
+        color: var(--black1f);
         box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         text-align: center; 
         
 } 
 
+.nav li a {
+  color: var(--black1f);
+  text-decoration: none;
+}
+
+.nav li a:hover  {
+  color: #118ed6;
+  transition: 0.5s;
+}
+
+.nav li.icon {
+  display: none;
+}
+
 .nav li:hover {
         /* background: #f8f8f8; */
         background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-        padding: 7px;
+        padding: 16px;
         border-top: 1px solid #118ed6;
         border-left: 1px solid #118ed6;
         border-right: 1px solid #118ed6;
         color: #118ed6;
-        box-shadow: -1px 2px 5px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 3px rgba(16, 114, 206, 0.2);
         text-align: center; 
         transition: 0.5s;
-
+        cursor: pointer;
 }
 
 #main-c .item{
@@ -199,44 +322,10 @@ color: #222222;
     margin-top: 5px;
 }
 
-section {
-    /* padding: 5px; */
-}
-
-
-/* #main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer"
-    ;
-    justify-content: space-between;
-    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1 ); 
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    border: 1px solid red;
-    box-sizing: border-box;
-} */
-
-
-
 header {
-    grid-column: 1 / -1;
-    justify-items: center;
-    align-items: center;
-}
-
-#main .nav {
   grid-column: 1 / -1;
 }
+
 
 #main-c {
   grid-column: 1 / -1;
@@ -250,14 +339,14 @@ footer {
 
 @media screen and (max-width: 600px) {
     body {
-        width: 80%;
+        width: 95vw;
         margin: 0 auto;
     }
 
     #main {
         display: grid;
         grid-template-columns: 1fr;
-        grid-auto-flow: column;
+        grid-auto-flow: row;
         grid-template-areas: 
             "header"
             "mmenu"
@@ -266,13 +355,80 @@ footer {
         ;
     }
 
-    #main .nav ul {
-        grid-auto-flow: row;
+    #main .info {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      align-items: center;
+      gap: 5vh;
+    }
+    
+    header .info .logo{
+  display: none;
+    }
+
+    #main .inn-nav {
+      display: grid;
+    }
+
+    #main .searchbar {
+      margin-top: .5rem;
+    }
+
+    #mainsearch .searchdiv1 {
+      width: 95vw;
+      max-width: 100%;
+    
+    }
+
+    #mainsearch .searchdiv1:hover {
+      width: 95vw;
+      max-width: 100%;
+    
+    }
+
+    #searchfield {
+      width: 80vw;
+    }
+
+    #searchfield:hover {
+      width: 80vw;
+    }
+
+
+    .nav li:not(:first-child) {display: none;}
+    
+    .nav li.icon {
+      float: right;
+      display: block;
     }
 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 600px) {
+  .nav.responsive ul {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
 
+  #main .responsive .inn-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    max-width: 100%;
+  }
 
+  .nav.responsive {
+    position: relative;
+  }
+  .nav.responsive .icon {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
