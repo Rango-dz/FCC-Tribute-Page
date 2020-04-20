@@ -246,14 +246,14 @@ header .searchbar {
 	width: 35vw;
 	height: 40px;
 	border: 0;
-	padding-left: 10px;
+	padding-left: 0.8rem;
 	outline-color: #dfdfdf;
 	background: #ffffff;
 	line-height: 25px;
 	color: var(--black1f);
 	font-family: monospace, "Courier New", Courier;
 	font-size: 1rem;
-	margin-left: 20px;
+	margin-left: 1.2rem;
 }
 
 #searchbar .sbutton {
@@ -331,14 +331,13 @@ span:after {
 	color: #118ed6;
 	box-shadow: inset 0px 2px 3px rgba(16, 114, 206, 0.2);
   text-align: center;
-  border-radius: 1px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	cursor: pointer;
 }
 
 #main-c > * {
-  margin: 0.8rem;
+  /* margin: 0.8rem; */
 }
 
 #tribute-info li {
@@ -355,11 +354,10 @@ span:after {
 
 #main-c .item-image figure {
   display: flex;
-  flex-direction: column nowrap;
+  flex-direction: column wrap;
   justify-content: center;
   align-content: center;
-  width: 95vw;
-  max-width: 100%;
+  width: 80vw;
   height: auto;
   overflow: hidden;
   /* padding-left: 25%; */
@@ -374,7 +372,9 @@ span:after {
 
 #img-caption {
   flex: 1;
-  align-self: center;
+  align-self: flex-end;
+  text-align: left;
+  text-transform: capitalize;
 }
 
 #image {
@@ -416,10 +416,12 @@ footer {
 	grid-column: 1 / -1;
 }
 
+/* Mobile 600px-------------------------------------------*/
+
 @media screen and (max-width: 600px) {
 	body {
-		width: 95vw;
-		margin: 0 auto;
+		/* width: 95vw;
+		margin: 0 auto; */
 	}
 
 	#main {
