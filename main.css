@@ -191,7 +191,7 @@ header .info .logo {
 header .searchbar {
 	position: relative;
 	border: none;
-	width: 100vw;
+	width: 100%;
 	padding-left: 0.1rem;
 }
 
@@ -208,7 +208,7 @@ header .searchbar {
 
 #mainsearch .searchdiv1 {
 	-webkit-box-flex: 1;
-	flex: 1 0;
+	flex: 1 1;
 	position: relative;
 	width: -webkit-max-content;
 	width: -moz-max-content;
@@ -377,6 +377,7 @@ span:after {
   align-self: flex-end;
   text-align: left;
   text-transform: capitalize;
+  padding-left: 0.5rem;
 }
 
 #image {
@@ -484,7 +485,10 @@ footer {
 		float: right;
 		display: block;
 	}
-}
+
+	#main-c .item-image figure {
+		display: block;
+	  }
 
 @media screen and (max-width: 600px) {
 	.nav.responsive ul {
