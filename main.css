@@ -48,6 +48,10 @@ body {
 	min-height: 100vh;
 }
 
+html {
+	font-size: responsive;
+  }
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
@@ -438,10 +442,6 @@ footer {
 			"main "
 			"footer";
   }
-  
-  /* #main header { 
-  padding-top: 10px;
-} */
 
 	#main .info {
 		display: grid;
