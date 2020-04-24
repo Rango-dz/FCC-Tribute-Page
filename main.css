@@ -151,7 +151,7 @@ img {
 		from(var(--firstgray)),
 		to(var(--secondgray))
 	);
-	background-image: linear-gradient(to left, var(--firstlight), var(--secondlight));
+	background-image: linear-gradient(to bottom, var(--firstlight), var(--secondlight));
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border: 1px solid #c6c6c6;
 	color: #222;
@@ -169,7 +169,7 @@ img {
 		from(var(--firstgray)),
 		to(var(--secondgray))
 	);
-	background-image: linear-gradient(to bottom var(--firstlight), var(--secondlight));
+	background-image: linear-gradient(to top var(--firstlight), var(--secondlight));
 	box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
 	border: 1px solid var(--thirdgray);
 	color: var(--black1f);
@@ -251,6 +251,7 @@ header .searchbar {
 	font-size: 1rem;
 	margin-left: 0.8rem;
 	box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.1);
+	position: relative;
 }
 
 #searchfield:hover {
@@ -273,7 +274,6 @@ header .searchbar {
 }
 
 #searchbar .sbutton {
-	/* padding: 20px; */
 	display: inline-block;
 	box-sizing: content-box;
 }
@@ -283,13 +283,10 @@ input[type="submit"] {
 	background-color: transparent;
 	border: none;
 	margin: 0px;
-	padding-right: 2rem;
 	cursor: pointer;
 	position: relative;
-}
-
-span {
-	position: relative;
+	right: 0;
+	top: 0;
 }
 
 span:after {
@@ -297,7 +294,8 @@ span:after {
 	content: "\f002";
 	font-size: 1rem;
 	position: absolute;
-	right: 1rem;
+	padding: 0.8rem;
+	right: 0px;
 	top: 1px;
 	pointer-events: none;
 	color: var(--blueweal);
@@ -437,10 +435,6 @@ footer {
 /* Mobile 600px-------------------------------------------*/
 
 @media screen and (max-width: 600px) {
-	body {
-		/* width: 95vw;
-		margin: 0 auto; */
-	}
 
 	#main {
 		display: grid;
